@@ -1,16 +1,13 @@
 const mongoose = require('mongoose');
 
-const url = 'mongodb://tlmti.onrender.com:27017'; // Update with your MongoDB connection URL
+const url = 'mongodb+srv://tlmtiuser:tlmtipassword@cluster0.rgdlwgu.mongodb.net/doctor?retryWrites=true&w=majority'; // Update with your MongoDB connection URL
 const dbName = 'doctor'; // Update with your database name
 
 let db = null;
 
 async function connectDB() {
   try {
-    await mongoose.connect(`${url}/${dbName}`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(url);
     db = mongoose.connection;
     console.log('Connected to MongoDB');
   } catch (error) {
