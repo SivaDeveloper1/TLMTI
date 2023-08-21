@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const url = 'mongodb://https://tlmti.onrender.com:27017'; // Update with your MongoDB connection URL
+const url = 'mongodb://tlmti.onrender.com:27017'; // Update with your MongoDB connection URL
 const dbName = 'doctor'; // Update with your database name
 
 let db = null;
